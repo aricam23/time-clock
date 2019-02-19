@@ -2,6 +2,11 @@
     ViewData["Title"] = "About";
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+
+<p>
+    Please choose the appropriate time punch selection, @ViewBag.EmpName .
+    <br />
+    <button type="button" name="COut" onclick="location.href='@Url.Action("ClockIn", "Home")'" />Clock In</button> <button type="button" name="CIn" onclick="location.href='@Url.Action("ClockOut", "Home")'" />Clock Out</button></p>
+
+

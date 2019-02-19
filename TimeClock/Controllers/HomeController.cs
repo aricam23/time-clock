@@ -15,9 +15,10 @@ namespace TimeClock.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult About(string EmpName)
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Your application description page for Time Clock.";
+            ViewBag.EmpName = EmpName;
 
             return View();
         }
@@ -29,8 +30,15 @@ namespace TimeClock.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ClockIn(string EmpName)
         {
+            ViewBag.EmpName = EmpName;
+            return View();
+        }
+
+        public IActionResult ClockOut(string EmpName)
+        {
+            ViewBag.EmpName = EmpName;
             return View();
         }
 
